@@ -1,0 +1,120 @@
+@import './theme.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--ff-monteserrat);
+  font-weight: 500;
+}
+
+body {
+  background-color: var(--mavi-9);
+  color: var(--ff-siyah);
+  margin: 1rem;
+}
+h1 {
+  background-color: var( --koyu-kırmızı);
+  width: 20rem;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 4rem;
+  text-align: center; /*yaziyi ortaladik icindekimedia query yazisi */ 
+  margin: 2rem auto;
+}
+.header {
+  background-color: var(--koyu-yeşil);
+  font-size: 2rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.navbar {
+  background-color: var(--gri-3);
+  display: flex;
+  justify-content: flex-start;
+
+}
+.navbar a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--beyaz);
+  padding: 1rem 1.3rem;
+}
+.navbar a:hover {
+  background-color: var(--gri-7);
+  color: var(--siyah);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+.col {
+  padding: 1rem;
+
+}
+.fs {
+  background-color: var(--gri-5);
+  width: 35%;
+
+}
+.ds {
+  background-color: var(--gri-6);
+  width: 20%;
+
+}
+.aws {
+  background-color: var(--gri-7);
+  width: 30%
+
+}
+.cms {
+  background-color: var(--gri-8);
+  width: 15%
+
+}
+@media screen and (max-width: 992px) {
+  body {
+    background-color: var(--açık-kırmızı);
+    color: var(--beyaz);
+  }
+  .col {
+    width: 50%;
+    margin: 0.5rem 0;
+
+  }
+  
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-color: var(--mor-1);
+    color: var(--beyaz);
+  }
+  .navbar {
+    flex-direction: column; /*asagida justify content degil align items ile center a alirim cünkü flex direction default u row dur o degisirse justify yerine align ve align items yerine de justify kullanilir */
+    align-items: center;
+  }
+  .header {
+    display: none;
+  }
+  .col {
+    width: 100%; /*bunun yerine .row flex-direction column da verilebilirdi */
+    margin: 0.5rem 0;
+
+  }
+  .navbar a {
+    width: 100%;
+    text-align: center;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
